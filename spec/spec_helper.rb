@@ -7,7 +7,7 @@ require File.expand_path('../../config/environment.rb', __FILE__)
 require 'capybara/dsl'
 
 Capybara.app = LaughTracksApp
-Capybara.save_and_open_page_path = 'tmp/capybara'
+Capybara.save_path = 'tmp/capybara'
 
 DatabaseCleaner.strategy = :truncation
 

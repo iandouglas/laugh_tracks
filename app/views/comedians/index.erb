@@ -1,0 +1,21 @@
+<h1>All Comedians</h1>
+
+<ul>
+<% @comedians.each do |comic| %>
+  <li>
+    <%= comic.name %>, <%= comic.age %>
+    <p id="comedian_<%= comic.id %>">Number of Specials: <%= comic.specials.length %></p>
+    <ul>
+      <% comic.specials.each do |special| %>
+        <li>
+          <%= special.name %>
+        </li>
+      <% end %>
+    </ul>
+  </li>
+<% end %>
+</ul>
+
+<div id="average">
+Average age: <%= @average_age %>
+</div>
